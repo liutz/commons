@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.huami.passport.sample" >
+
+    <!-- 声明Passport(ID) SDK必要权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.xiaomi.permission.AUTH_SERVICE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:name="com.huami.passport.sample.MyApplication"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 用户平台为每个APP分配唯一标识 -->
+        <meta-data android:name="hm_app_id" android:value="cn.com.smartdevices.pan.sample" />
+        <!-- 请正确配置设备类型，取值为android_xx组成[xx有phone、tv、pad、watch]，注：字母小写 -->
+        <meta-data android:name="hm_device_type" android:value="android_phone" />
+        <!-- 用户平台为应用申请Facebook唯一标识 -->
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <activity android:name="com.xiaomi.account.openauth.AuthorizeActivity" />
+        <!-- 配置登录Loading态UI -->
+        <activity
+            android:name="com.huami.passport.sample.wxapi.WXEntryActivity"
+            android:exported="true"
+            android:theme="@style/hmid_loading_dialog"
+            android:launchMode="singleTop" >
+        </activity>
+        <!-- 海外Facebook相关配置 -->
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:label="@string/app_name" />
+        <!-- 声明Passport(ID) SDK必要组件结束：～ -->
+    </application>
+
+</manifest>

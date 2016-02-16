@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/home/zeus/mi/mydroid/commons/LitePal/sample/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/home/zeus/mi/mydroid/commons/LitePal/sample/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-c648669f51433d19c7f116eb5b7f31c338d36bbf.jar" />
+    </item>
+    <item
+        jar="/home/zeus/mi/mydroid/commons/LitePal/sample/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/home/zeus/mi/mydroid/commons/LitePal/sample/build/intermediates/pre-dexed/debug/classes-b66721c6223fcc8f7d63c80faa67036c26924b53.jar" />
+    </item>
+    <item
+        jar="/home/zeus/mi/mydroid/commons/LitePal/sample/build/intermediates/exploded-aar/LitePal/litepal/unspecified/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="9f2a4443d837cb1f688abffa7364d29f63cff8db">
+        <dex dex="/home/zeus/mi/mydroid/commons/LitePal/sample/build/intermediates/pre-dexed/debug/classes-565257485f00c24defe0fbe0b6c2d68f37ae7700.jar" />
+    </item>
+    <item
+        jar="/home/zeus/mi/mydroid/commons/LitePal/sample/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/home/zeus/mi/mydroid/commons/LitePal/sample/build/intermediates/pre-dexed/debug/classes-4aca499bac7f6453048a255e1031cd01d9694d1f.jar" />
+    </item>
+    <item
+        jar="/home/zeus/sdk/android/android_sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/home/zeus/mi/mydroid/commons/LitePal/sample/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-f7778ad3752e4552a127cba95215dbaec2836f7f.jar" />
+    </item>
+
+</items>

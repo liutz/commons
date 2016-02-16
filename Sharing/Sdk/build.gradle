@@ -1,0 +1,67 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 21
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs' //this way we can find the .aar file in libs folder
+        }
+    }
+}
+
+
+task javadoc(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    include( "**/AccountManager.java" )
+    include( "**/ErrorCode.java" )
+    include( "**/IAccount.java" )
+    include( "**/Token.java" )
+    include( "**/TokenInfo.java" )
+    include( "**/UserInfo.java" )
+    include( "**/AppInfo.java" )
+    include( "**/Device.java" )
+    include( "**/TpaConfig.java" )
+    include( "**/Utils.java" )
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+javadoc {
+    options {
+        encoding "UTF-8"
+        charSet 'UTF-8'
+        author true // 支持author标记
+        version true // 支持version标记
+        links "http://docs.oracle.com/javase/7/docs/api"
+    }
+}
+
+artifacts {
+    archives javadocJar
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:21.0.3'
+    compile 'com.huami.android.partner:wechat-libammsdk:1.0.0'
+    compile 'com.huami.android.partner:qq-opensdk:2.9.0'
+    compile 'com.huami.android.partner:weibo-opensdk:3.0.1'
+    compile 'com.facebook.android:facebook-android-sdk:4.7.0'
+}

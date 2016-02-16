@@ -1,0 +1,20 @@
+{  
+   "wechat":{
+      "appid":"wx99d9c0ee82b35286",
+      "scope":"snsapi_userinfo",
+      "redirect_url":"http://wx.qq.com",
+      "third_name":"wechat-d1"
+   },
+   "mi":{
+      "appid":"2882303761517374183",
+      "scope":"1",
+      "redirect_url":"https://hm.xiaomi.com/huami.health.loginview.do",
+      "third_name":"mi-d1",
+      "skip_confirm":false
+   },
+   "facebook":{
+      "appid":"",
+      "scope":"public_profile:user_friends",
+      "third_name":"facebook"
+   }
+}

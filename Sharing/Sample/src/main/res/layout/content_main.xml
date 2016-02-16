@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_main" tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/onWeChatLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:onClick="onWeChatLogin"
+        android:text="微信登录" />
+
+    <Button
+        android:id="@+id/onXiaoMiLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/onWeChatLogin"
+        android:layout_centerHorizontal="true"
+        android:onClick="onXiaoMiLogin"
+        android:text="小米登录" />
+
+    <Button
+        android:id="@+id/onFacebookLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/onXiaoMiLogin"
+        android:layout_centerHorizontal="true"
+        android:onClick="onFacebookLogin"
+        android:text="Facebook登录" />
+
+    <Button
+        android:id="@+id/onGetToken"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/onFacebookLogin"
+        android:layout_centerHorizontal="true"
+        android:onClick="onGetToken"
+        android:text="获取Token" />
+
+    <Button
+        android:id="@+id/onUserProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/onGetToken"
+        android:layout_centerHorizontal="true"
+        android:onClick="onUserProfile"
+        android:text="用户信息" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/onLogout"
+        android:layout_below="@id/onUserProfile"
+        android:layout_centerHorizontal="true"
+        android:onClick="onLogout"
+        android:text="登出" />
+    
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkToken"
+        android:layout_below="@id/onLogout"
+        android:layout_centerHorizontal="true"
+        android:onClick="onCheckToken"
+        android:text="校验Token" />
+    
+    <Button
+        android:id="@+id/closeLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checkToken"
+        android:layout_centerHorizontal="true"
+        android:onClick="onCloseLoading"
+        android:text="关闭Loading态" />
+    
+    <Button
+        android:id="@+id/relogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/closeLoading"
+        android:layout_centerHorizontal="true"
+        android:onClick="onRelogin"
+        android:text="重新登录" />
+
+</RelativeLayout>
