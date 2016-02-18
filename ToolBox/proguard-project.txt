@@ -1,0 +1,81 @@
+-optimizationpasses 5
+-dontusemixedcaseclassnames
+-dontskipnonpubliclibraryclasses
+-dontpreverify
+-verbose
+-optimizations !code/simplification/arithmetic,!field/*,!class/merging/,!code/allocation/variable,!method/propagation/*,!method/marking/*
+-keepattributes Signature,Deprecated,Exceptions,InnerClasses
+-keepattributes *Annotation*    
+-ignorewarnings
+-dontoptimize
+
+-keep public class * extends android.app.Activity
+-keep public class * extends android.app.Application
+-keep public class * extends android.app.Service
+-keep public class * extends android.content.BroadcastReceiver
+-keep public class * extends android.content.ContentProvider
+-keep public class * extends android.app.backup.BackupAgentHelper
+-keep public class * extends android.preference.Preference
+-keep public class * extends android.database.sqlite.SQLiteOpenHelper
+-keep class android.accounts.Account { *; }
+-keep class android.accounts.AccountManager { *; }
+-keep class android.content.pm.PackageManager { *; }
+-keep class android.content.pm.ApplicationInfo { *; }
+
+-keep class java.** { *; }
+-keep class com.novell.** { *;}
+-keep class org.mortbay.** { *; }
+-keep class com.phonegap.** { *; }
+-keep class com.kenai.jbosh.** { *; }
+-keep class org.apache.http.entity.mime.** { *; }
+-keep class org.apache.commons.io.** { *; }
+-keep class org.apache.commons.fileupload.** { *; }
+-keep class org.apache.commons.codec.** { *; }
+-keep class org.apache.cordova.** { *; }
+-keep class javax.servlet.** { *; }
+-keep class com.google.gson.** { *; }
+-keep class android.content.Context { *; }
+-keep class android.support.v4.** { *; }
+
+
+-keepclassmembers class * implements java.io.Serializable {
+    static final long serialVersionUID;
+    private static final java.io.ObjectStreamField[] serialPersistentFields;
+    !static !transient <fields>;
+    private void writeObject(java.io.ObjectOutputStream);
+    private void readObject(java.io.ObjectInputStream);
+    java.lang.Object writeReplace();
+    java.lang.Object readResolve();
+}
+
+-keep public class * extends android.view.View {
+    public <init>(android.content.Context);
+    public <init>(android.content.Context, android.util.AttributeSet);
+    public <init>(android.content.Context, android.util.AttributeSet, int);
+    public void set*(...);
+}
+
+-keepclasseswithmembernames class * {
+    native <methods>;
+}
+
+-keepclasseswithmembernames class * {
+    public <init>(android.content.Context, android.util.AttributeSet);
+}
+
+-keepclasseswithmembernames class * {
+    public <init>(android.content.Context, android.util.AttributeSet, int);
+}
+
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+-keep class * implements android.os.Parcelable {
+  public static final android.os.Parcelable$Creator *;
+}
+
+-keepclassmembers class **.R$* {
+    public static <fields>;
+}

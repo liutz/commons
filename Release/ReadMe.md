@@ -1,4 +1,4 @@
-**开源产品发布&备案到android-release仓库**
+**备案到android-release仓库**
 
 20160216
 加入Litepal-1.0.0.jar到仓库中

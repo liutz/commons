@@ -1,1 +1,1 @@
-include ':Camera', ':CameraSample'
+include ':Camera', ':App'
