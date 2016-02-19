@@ -1,5 +1,9 @@
 **备案到android-release仓库**
 
+20160219
+发布toolbox-1.0.0仓库中
+compile('com.huami.android.commons:toolbox:1.0.0')
+
 20160216
 加入Litepal-1.0.0.jar到仓库中
 compile('com.huami.android.commons:litepal:1.0.0')

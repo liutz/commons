@@ -25,6 +25,8 @@ import android.widget.RelativeLayout;
 
 public class SimpleCamera extends FrameLayout implements BasePreview.OnCameraStatusListener,SensorEventListener, AutoFocusCallback{
 
+	public static final String TAG = "SimpleCamera";
+
 	public static final int INIT_STATE = 1;
 	public static final int TAKE_STATE = 2;
 	
@@ -168,7 +170,12 @@ public class SimpleCamera extends FrameLayout implements BasePreview.OnCameraSta
 
 	@Override
 	public void onSensorChanged(SensorEvent event) {
-		
+
+		if(mCurrentState != INIT_STATE){
+			Log.i(TAG,"[onSensorChanged] because current is not init state");
+			return;
+		}
+
 		float x = event.values[0];
         float y = event.values[1];
         float z = event.values[2];
@@ -247,6 +254,11 @@ public class SimpleCamera extends FrameLayout implements BasePreview.OnCameraSta
 	 */
 	public void focusOnTouch(MotionEvent event) {
 
+		if(mCurrentState != INIT_STATE){
+			Log.i(TAG,"[focusOnTouch] because current is not init state");
+			return;
+		}
+
 		int[] location = new int[2];		
 		mCameraPreview.getLocationOnScreen(location);
 
@@ -259,7 +271,8 @@ public class SimpleCamera extends FrameLayout implements BasePreview.OnCameraSta
 				location[0], location[0] + mCameraPreview.getWidth(), location[1],
 				location[1] + mCameraPreview.getHeight());
 
-		Camera.Parameters parameters = mBasePreview.getCamera().getParameters();
+		Camera camera = mBasePreview.getCamera();
+		Camera.Parameters parameters = camera.getParameters();
 		parameters.setFocusMode(Camera.Parameters.FOCUS_MODE_AUTO);
 
 		if (parameters.getMaxNumFocusAreas() > 0) {

@@ -8,7 +8,7 @@ buildscript {
                 username mavenUser
                 password mavenPassword
             }
-            url "http://maven.AmazFit.com:8081/artifactory/libs-snapshot"
+            url "http://maven.amazfit.com:8081/artifactory/android-release"
         }
     }
     dependencies {
@@ -25,7 +25,7 @@ allprojects {
                 username mavenUser
                 password mavenPassword
             }
-            url "http://AWS.AmazFit.com:8081/artifactory/libs-snapshot"
+            url "http://maven.amazfit.com:8081/artifactory/android-release"
         }
     }
 }
