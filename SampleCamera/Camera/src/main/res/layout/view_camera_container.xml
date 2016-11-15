@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <com.huami.commons.camera.BasePreview
+        android:id="@+id/base_preview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <RelativeLayout
+        android:id="@+id/camera_preview"
+        android:clipChildren="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.huami.commons.camera.FocusView
+            android:id="@+id/camera_focus"
+            android:layout_width="80dp"                       
+            android:layout_height="80dp" />
+
+        <ImageView
+            android:id="@+id/camera_image"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            tools:ignore="contentDescription" />
+    </RelativeLayout>
+
+</merge>
