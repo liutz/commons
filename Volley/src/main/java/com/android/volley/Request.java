@@ -87,6 +87,8 @@ public abstract class Request<T> implements Comparable<Request<T>> {
     /** Whether or not this request has been canceled. */
     private boolean mCanceled = false;
 
+    private boolean mFollowRedirects = true;
+
     /** Whether or not a response has been delivered for this request yet. */
     private boolean mResponseDelivered = false;
 
@@ -102,6 +104,14 @@ public abstract class Request<T> implements Comparable<Request<T>> {
 
     /** An opaque token tagging this request; used for bulk cancellation. */
     private Object mTag;
+
+    public void setInstanceFollowRedirects(boolean followRedirects) {
+        mFollowRedirects = followRedirects;
+    }
+
+    public boolean getInstanceFollowRedirects() {
+        return mFollowRedirects;
+    }
 
     /**
      * Creates a new request with the given URL and error listener.  Note that

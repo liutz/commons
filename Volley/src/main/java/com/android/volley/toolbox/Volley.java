@@ -42,11 +42,11 @@ public class Volley {
     public static RequestQueue newRequestQueue(Context context, HttpStack stack) {
         File cacheDir = new File(context.getCacheDir(), DEFAULT_CACHE_DIR);
 
-        String userAgent = "volley/0";
+        String userAgent = "volley/1.0.2";
         try {
             String packageName = context.getPackageName();
             PackageInfo info = context.getPackageManager().getPackageInfo(packageName, 0);
-            userAgent = packageName + "/" + info.versionCode;
+            userAgent += packageName + "/" + info.versionCode;
         } catch (NameNotFoundException e) {
         }
 
