@@ -18,7 +18,6 @@ package com.android.volley;
 
 import android.os.SystemClock;
 import android.util.Log;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -140,7 +139,7 @@ public class VolleyLog {
         /** Adds a marker to this log with the specified name. */
         public synchronized void add(String name, long threadId) {
             if (mFinished) {
-                throw new IllegalStateException("Marker added to finished log");
+                d("Marker added to finished log");
             }
 
             mMarkers.add(new Marker(name, threadId, SystemClock.elapsedRealtime()));
