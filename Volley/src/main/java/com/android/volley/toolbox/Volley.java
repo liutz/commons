@@ -42,7 +42,7 @@ public class Volley {
     public static RequestQueue newRequestQueue(Context context, HttpStack stack) {
         File cacheDir = new File(context.getCacheDir(), DEFAULT_CACHE_DIR);
 
-        String userAgent = "volley/1.0.4";
+        String userAgent = "volley/1.0.5";
         try {
             String packageName = context.getPackageName();
             PackageInfo info = context.getPackageManager().getPackageInfo(packageName, 0);
