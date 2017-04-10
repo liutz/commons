@@ -1,5 +1,8 @@
 **备案到android-release仓库**
 
+20170410
+更新小米帐号sdk（原oauth1.5.2.jar-修改为xiaomi-oauth-1.1.1)
+
 20160219
 发布toolbox-1.0.0仓库中
 compile('com.huami.android.commons:toolbox:1.0.0')
@@ -12,9 +15,9 @@ compile('com.huami.android.commons:litepal:1.0.0')
 添加到华米maven仓库中，需要对三方jar重新命名
 
 qq-open-sdk-v2.9-lite.jar	----------   qq-opensdk-2.9.0.jar
-weibosdkcore_v3.0.1.jar         ----------   weibo-opensdk-3.0.1.jar
-libammsdk.jar			----------   wechat-libammsdk-1.0.0.jar
-xiaomi-oauth.jar                ----------   xiaomi-oauth-1.0.0.jar
+weibosdkcore_v3.0.1.jar     ----------   weibo-opensdk-3.0.1.jar
+libammsdk.jar			    ----------   wechat-libammsdk-1.0.0.jar
+xiaomi-oauth.jar            ----------   xiaomi-oauth-1.0.0.jar
 
 compile('com.huami.android.commons:volley:1.0.1')
 compile('com.huami.android.partner:wechat-libammsdk:1.0.0')
