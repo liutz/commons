@@ -1,4 +1,7 @@
 **备案到android-release仓库**
+20170607
+新增Android-Universal-Image-Loader 开源图片加载框架
+compile('com.huami.android.partner:nostra13-imageloader:1.9.5')
 
 20170415
 更新qq sdk v3.2.0轻量级到maven
