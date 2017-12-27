@@ -1,3 +1,9 @@
+## 2017/12/27
+* 更新小米oauth.1.6.6
+```
+compile('com.xxxxx.android.partner:xiaomi-oauth:1.6.6')
+```
+
 ## 2017/09/29
 * 新增line aar包4.0.5
 ```
