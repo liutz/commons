@@ -1,3 +1,6 @@
+## 2019/05/05
+* 更新小米oauth-android-2.0.8.aar
+
 ## 2019/04/18
 * 更新小米oauth-android-2.0.5.aar
 * 新增加小米依赖diagnosis-1.0.3.aar
