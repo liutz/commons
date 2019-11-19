@@ -1,3 +1,6 @@
+## 2019/11/19
+* 加入小米广告sdk(analytics_2.9.0_full.aar/MediationSDK-2.0.0.jar)
+
 ## 2019/05/05
 * 更新小米oauth-android-2.0.8.aar
 
@@ -58,4 +61,6 @@ compile('com.xxxxx.android.partner:wechat-libammsdk:1.0.0')
 compile('com.xxxxx.android.partner:xiaomi-oauth:1.0.0')
 compile('com.xxxxx.android.partner:qq-opensdk:2.9.0')
 compile('com.xxxxx.android.partner:weibo-opensdk:3.0.1')
+compile('com.xxxxx.android.partner:xiaomi-analytics:2.9.0')
+compile('com.xxxxx.android.partner:xiaomi-ad:2.0.0')
 ```
